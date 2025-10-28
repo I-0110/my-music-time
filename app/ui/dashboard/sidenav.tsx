@@ -2,38 +2,6 @@
 
 import Link from 'next/link';
 
-const months = [
-    'January', 
-    'February', 
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
-];
-
-const categories = [
-    'Watch',
-    'Rhythm',
-    'Birthday',
-    'Sing'
-];
-
-const grades = [
-    'GradeK',
-    'Grade1',
-    'Grade2',
-    'Grade3',
-    'Grade4',
-    'Grade5',
-    'GradeMiddle+'
-];
-
 export default function SideNav () {
     return (
         <>
@@ -51,35 +19,14 @@ export default function SideNav () {
 
                 <div className="mb-4">
                     <h3 className="font-semibold">Month</h3>
-                    <ul className="ml-2">
-                    {months.map((m) => (
-                        <li key={m}>
-                        <Link href={`/dashboard/month/${encodeURIComponent(m)}`}>{m}</Link>
-                        </li>
-                    ))}
-                    </ul>
                 </div>
 
                 <div className="mb-4">
                     <h3 className="font-semibold">Category</h3>
-                    <ul className="ml-2">
-                    {categories.map((c) => (
-                        <li key={c}>
-                        <Link href={`/dashboard/category/${encodeURIComponent(c)}`}>{c}</Link>
-                        </li>
-                    ))}
-                    </ul>
                 </div>
 
                 <div className="mb-4">
                     <h3 className="font-semibold">Grade Level</h3>
-                    <ul className="ml-2">
-                    {grades.map((g) => (
-                        <li key={g}>
-                        <Link href={`/dashboard/grade/${g}`}>Grade {g}</Link>
-                        </li>
-                    ))}
-                    </ul>
                 </div>
             </aside>
         </>
